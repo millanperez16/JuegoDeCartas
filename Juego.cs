@@ -12,7 +12,7 @@ public class Juego
         Baraja baraja = new Baraja();
 
         Console.WriteLine("Te invito a jugar conmigo a las cartas. ¿Cómo te llamas?");
-        string nombreJ1 = Console.ReadLine();
+        string nombreJ1 = Console.ReadLine() ?? string.Empty;
         Jugador jugador = new Jugador(nombreJ1);
         Jugador maquina = new Jugador("Máquina");
 

@@ -7,13 +7,13 @@ public class Baraja
     public Baraja()
     {
         cartas = new List<Carta>();
-        // Añadir las cartas de la baraja española
         string[] palos = { "Oros", "Copas", "Espadas", "Bastos" };
-        for (int i = 1; i <= 12; i++)  // Asumiendo que la baraja tiene 12 cartas por palo
+
+        for (int i = 1; i <= 12; i++)
         {
             foreach (string palo in palos)
             {
-                cartas.Add(new Carta(palo, i));  // Crear cartas del 1 al 12 para cada palo
+                cartas.Add(new Carta(palo, i));
             }
         }
     }
@@ -33,19 +33,19 @@ public class Baraja
         }
     }
 
-    public Carta RobarPrimeraCarta() 
+    public Carta? RobarPrimeraCarta() 
     {
         return RobarCartaEnPosicion(0);
     }
 
-    public Carta RobarCartaAlAzar()
+    public Carta? RobarCartaAlAzar()
     {
         Random rnd = new Random();
         int azar = rnd.Next(cartas.Count);
         return RobarCartaEnPosicion(azar);
     }
 
-    public Carta RobarCartaEnPosicion(int posicion) 
+    public Carta? RobarCartaEnPosicion(int posicion) 
     {
         if (cartas.Count == 0)
         {

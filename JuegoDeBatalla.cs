@@ -56,12 +56,15 @@ public class JuegoDeBatalla
         else
             Console.WriteLine("Habemus empate");
 
+        Console.WriteLine("Pulsa una tecla para continuar...");
+        Console.ReadKey();
+
     }
 
-    static void ResultadosPartida(int puntosJ1, int puntosMaquina)
+    public void ResultadosPartida(int puntosJ1, int puntosMaquina)
     { 
         Console.WriteLine("--- Final ---");
-        Console.WriteLine($"Puntos J1: {puntosJ1}");
+        Console.WriteLine($"Puntos J1 ({jugador.Nombre}): {puntosJ1}");
         Console.WriteLine($"Puntos Máquina: {puntosMaquina}");
 
         if (puntosJ1 > puntosMaquina)

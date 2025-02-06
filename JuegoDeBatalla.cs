@@ -34,8 +34,10 @@ public class JuegoDeBatalla
     {
         baraja.Barajar();
         jugador.Robar(baraja);
+        Console.WriteLine($"Quedan {baraja.Cartas.Count} cartas");
         baraja.Barajar();
         maquina.Robar(baraja);
+        Console.WriteLine($"Quedan {baraja.Cartas.Count} cartas");
 
         Carta cartaJ1 = Jugador.Mano[Jugador.Mano.Count - 1];
         Carta cartaCPU = Maquina.Mano[Maquina.Mano.Count - 1];

@@ -28,10 +28,9 @@ public class Juego
 
     static void AsignarCartas(Baraja baraja, Jugador jugador, Jugador maquina)
     {
-        for (int i = 0; i < 5; i++)
-        {
-            jugador.Robar(baraja);
-            maquina.Robar(baraja);
-        }
+
+        jugador.Robar(baraja);
+        maquina.Robar(baraja);
+
     }
 }
